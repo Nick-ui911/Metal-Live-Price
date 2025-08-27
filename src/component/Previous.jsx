@@ -23,7 +23,7 @@ const PreviousPrices = () => {
         const startDateStr = startDate.toISOString().split("T")[0];
 
         const url = new URL("https://api.metals.dev/v1/timeseries");
-        url.searchParams.append("api_key", "DWM3VBVSSWZYC70KYDTT8800KYDTT");
+        url.searchParams.append("api_key", "NNLHMKZDD28H8TTAITNM906TAITNM");
         url.searchParams.append("start_date", startDateStr);
         url.searchParams.append("end_date", endDate);
         url.searchParams.append("metals", "gold,silver,platinum");
@@ -58,11 +58,6 @@ const PreviousPrices = () => {
 
     const pricePerUnit = currencyPerToz / unitMultipliers[unit];
 
-    console.log(
-      `Actual rate: ${actualRate.toFixed(4)}, Result: ${pricePerUnit.toFixed(
-        2
-      )} ${currency}/${unit}`
-    );
 
     return pricePerUnit;
   };

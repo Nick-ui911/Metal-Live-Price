@@ -52,7 +52,7 @@ const Live = () => {
       
       try {
         const url = new URL("https://api.metals.dev/v1/latest");
-        url.searchParams.append("api_key", "DWM3VBVSSWZYC70KYDTT8800KYDTT");
+        url.searchParams.append("api_key","NNLHMKZDD28H8TTAITNM906TAITNM");
         url.searchParams.append("metals", "gold,silver,platinum");
         
         const response = await fetch(url);
@@ -66,7 +66,6 @@ const Live = () => {
         if (result.status === 'success') {
           setData(result);
           setLastUpdate(new Date());
-          console.log("Live API Response:", result);
         } else {
           throw new Error(result.error_message || 'API request failed');
         }
